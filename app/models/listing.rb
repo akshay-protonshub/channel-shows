@@ -19,6 +19,6 @@ class Listing < ApplicationRecord
 
   def schedule_notifications_for_user
       time = Time.now + (self.show.time.to_i*60*60) - 30.minutes
-      EmailWorker.perform_at(time, "send_notification", self.id)
+      EmailWorker.perform_at(time, "send_notification", self.id) if self.fav
   end
 end

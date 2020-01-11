@@ -6,9 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# USERS
-alexis = User.create(email: 'alexisadorn@gmail.com', password: 'test123')
-joe = User.create(email: 'joe@gmail.com', password: 'test123')
+
 
 # WATCHLISTS
 currently_watching = Watchlist.create(name: 'Currently Watching', description: 'Shows I\'m currently watching', user: alexis)
